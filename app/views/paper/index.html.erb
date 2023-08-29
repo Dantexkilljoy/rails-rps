@@ -1,0 +1,20 @@
+<h2>
+  We played paper!
+</h2>
+
+<h2>
+  They played <%= @comp_move %>
+</h2>
+
+<% if @comp_move == "scissors" %>
+  <% @result = "lost!" %>
+<% elsif @comp_move == "rock" %>
+  <% @result = "win!" %>
+<% else %>
+  <% @result = "tied" %>
+<% end %>
+<h2>
+  We <%= @result %>
+</h2>
+
+<%= link_to "Rules", "/" %>
